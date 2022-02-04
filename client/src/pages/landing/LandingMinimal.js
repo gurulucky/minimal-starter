@@ -36,9 +36,9 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const CardStyle = styled(Card)(({ theme }) => {
   const shadowCard = (opacity) =>
-    theme.palette.mode === 'light'
-      ? alpha(theme.palette.grey[500], opacity)
-      : alpha(theme.palette.common.black, opacity);
+    theme.palette?.mode === 'light'
+      ? alpha(theme.palette?.grey[500], opacity)
+      : alpha(theme.palette?.common.black, opacity);
 
   return {
     maxWidth: 380,
@@ -49,7 +49,7 @@ const CardStyle = styled(Card)(({ theme }) => {
     boxShadow: `-40px 40px 80px 0 ${shadowCard(0.48)}`,
     [theme.breakpoints.up('md')]: {
       boxShadow: 'none',
-      backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800]
+      backgroundColor: theme.palette?.grey[theme.palette?.mode === 'light' ? 200 : 800]
     },
     '&.cardLeft': {
       [theme.breakpoints.up('md')]: { marginTop: -40 }
@@ -57,7 +57,7 @@ const CardStyle = styled(Card)(({ theme }) => {
     '&.cardCenter': {
       [theme.breakpoints.up('md')]: {
         marginTop: -80,
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette?.background.paper,
         boxShadow: `-40px 40px 80px 0 ${shadowCard(0.4)}`,
         '&:before': {
           top: 0,
@@ -71,7 +71,7 @@ const CardStyle = styled(Card)(({ theme }) => {
           width: 'calc(100% - 40px)',
           height: 'calc(100% - 40px)',
           borderRadius: theme.shape.borderRadiusMd,
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: theme.palette?.background.paper,
           boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`
         }
       }
@@ -84,14 +84,14 @@ const CardIconStyle = styled('img')(({ theme }) => ({
   height: 40,
   margin: 'auto',
   marginBottom: theme.spacing(10),
-  filter: shadowIcon(theme.palette.primary.main)
+  filter: shadowIcon(theme.palette?.primary.main)
 }));
 
 // ----------------------------------------------------------------------
 
 export default function LandingMinimalHelps() {
   const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
+  const isLight = theme.palette?.mode === 'light';
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
@@ -120,10 +120,10 @@ export default function LandingMinimalHelps() {
                     alt={card.title}
                     sx={{
                       ...(index === 0 && {
-                        filter: (theme) => shadowIcon(theme.palette.info.main)
+                        filter: (theme) => shadowIcon(theme.palette?.info.main)
                       }),
                       ...(index === 1 && {
-                        filter: (theme) => shadowIcon(theme.palette.error.main)
+                        filter: (theme) => shadowIcon(theme.palette?.error.main)
                       })
                     }}
                   />

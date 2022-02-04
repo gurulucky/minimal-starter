@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------
 
 export default function Slider(theme) {
-  const isLight = theme.palette.mode === 'light';
+  const isLight = theme.palette?.mode === 'light';
 
   return {
     MuiSlider: {
@@ -12,16 +12,16 @@ export default function Slider(theme) {
       styleOverrides: {
         root: {
           '&.Mui-disabled': {
-            color: theme.palette.action.disabled
+            color: theme.palette?.action.disabled
           }
         },
         markLabel: {
           fontSize: 13,
-          color: theme.palette.text.disabled
+          color: theme.palette?.text.disabled
         },
         valueLabel: {
           borderRadius: 8,
-          backgroundColor: theme.palette.grey[isLight ? 800 : 700]
+          backgroundColor: theme.palette?.grey[isLight ? 800 : 700]
         }
       }
     }

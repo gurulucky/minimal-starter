@@ -14,8 +14,8 @@ const ContentStyle = styled('div')(({ theme }) => ({
   paddingBottom: theme.spacing(10),
   borderRadius: theme.shape.borderRadiusMd,
   backgroundImage: `linear-gradient(135deg,
-    ${theme.palette.primary.main} 0%,
-    ${theme.palette.primary.dark} 100%)`,
+    ${theme.palette?.primary.main} 0%,
+    ${theme.palette?.primary.dark} 100%)`,
   [theme.breakpoints.up('md')]: {
     display: 'flex',
     maxWidth: '100%',
@@ -62,7 +62,7 @@ export default function LandingAdvertisement() {
               sx={{
                 whiteSpace: 'nowrap',
                 boxShadow: (theme) => theme.customShadows.z8,
-                color: (theme) => theme.palette.getContrastText(theme.palette.common.white),
+                color: (theme) => theme.palette?.getContrastText(theme.palette?.common.white),
                 bgcolor: 'common.white',
                 '&:hover': { bgcolor: 'grey.300' }
               }}

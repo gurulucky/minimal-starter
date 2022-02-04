@@ -162,7 +162,7 @@ export default function CarouselThumbnail() {
           ...(MOCK_CAROUSELS.length === 5 && { maxWidth: THUMB_SIZE * 6 }),
           '& .slick-current img': {
             opacity: 1,
-            border: (theme) => `solid 3px ${theme.palette.primary.main}`
+            border: (theme) => `solid 3px ${theme.palette?.primary.main}`
           }
         }}
       >

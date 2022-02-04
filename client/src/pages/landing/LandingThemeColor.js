@@ -23,8 +23,8 @@ import { MotionInView, varFadeInUp, varFadeInDown } from '../../components/anima
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(15, 0),
   backgroundImage:
-    theme.palette.mode === 'light'
-      ? `linear-gradient(180deg, ${theme.palette.grey[300]} 0%, ${alpha(theme.palette.grey[300], 0)} 100%)`
+    theme.palette?.mode === 'light'
+      ? `linear-gradient(180deg, ${theme.palette?.grey[300]} 0%, ${alpha(theme.palette?.grey[300], 0)} 100%)`
       : 'none'
 }));
 
@@ -51,7 +51,7 @@ export default function LandingThemeColor() {
         <MotionInView variants={varFadeInUp}>
           <Typography
             sx={{
-              color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'text.primary')
+              color: (theme) => (theme.palette?.mode === 'light' ? 'text.secondary' : 'text.primary')
             }}
           >
             Express your own style with just one click.

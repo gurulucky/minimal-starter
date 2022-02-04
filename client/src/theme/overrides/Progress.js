@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------
 
 export default function Progress(theme) {
-  const isLight = theme.palette.mode === 'light';
+  const isLight = theme.palette?.mode === 'light';
 
   return {
     MuiLinearProgress: {
@@ -14,7 +14,7 @@ export default function Progress(theme) {
           borderRadius: 4
         },
         colorPrimary: {
-          backgroundColor: theme.palette.primary[isLight ? 'lighter' : 'darker']
+          backgroundColor: theme.palette?.primary[isLight ? 'lighter' : 'darker']
         },
         buffer: {
           backgroundColor: 'transparent'

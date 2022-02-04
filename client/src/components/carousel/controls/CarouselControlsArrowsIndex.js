@@ -24,15 +24,15 @@ const RootStyle = styled(Box)(({ theme }) => ({
   position: 'absolute',
   bottom: theme.spacing(2),
   right: theme.spacing(2),
-  color: theme.palette.common.white,
+  color: theme.palette?.common.white,
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.grey[900], 0.48)
+  backgroundColor: alpha(theme.palette?.grey[900], 0.48)
 }));
 
 const ArrowStyle = styled(MIconButton)(({ theme }) => ({
   padding: 6,
   opacity: 0.48,
-  color: theme.palette.common.white,
+  color: theme.palette?.common.white,
   '&:hover': { opacity: 1 }
 }));
 

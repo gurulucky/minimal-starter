@@ -35,7 +35,7 @@ const ContentItemStyle = styled('div')(({ theme }) => ({
   WebkitBackdropFilter: 'blur(8px)', // Fix on Mobile
   borderBottomRightRadius: 16,
   justifyContent: 'space-between',
-  backgroundColor: alpha(theme.palette.grey[900], 0.72),
+  backgroundColor: alpha(theme.palette?.grey[900], 0.72),
   flexDirection: theme.direction === 'rtl' ? 'row-reverse' : 'row'
 }));
 
@@ -61,7 +61,7 @@ function CarouselItem({ item }) {
           sx={{
             color: 'common.white',
             '&:hover': {
-              bgcolor: (theme) => alpha(theme.palette.common.white, theme.palette.action.hoverOpacity)
+              bgcolor: (theme) => alpha(theme.palette?.common.white, theme.palette?.action.hoverOpacity)
             }
           }}
         >

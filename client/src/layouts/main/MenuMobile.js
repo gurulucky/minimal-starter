@@ -28,7 +28,7 @@ const ListItemStyle = styled(ListItemButton)(({ theme }) => ({
   textTransform: 'capitalize',
   paddingLeft: theme.spacing(PADDING),
   paddingRight: theme.spacing(2.5),
-  color: theme.palette.text.secondary
+  color: theme.palette?.text.secondary
 }));
 
 // ----------------------------------------------------------------------
@@ -118,7 +118,7 @@ function MenuMobileItem({ item, isOpen, isActive, onOpen }) {
           ...(isActive && {
             color: 'primary.main',
             fontWeight: 'fontWeightMedium',
-            bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity)
+            bgcolor: (theme) => alpha(theme.palette?.primary.main, theme.palette?.action.selectedOpacity)
           })
         }}
       >
@@ -136,7 +136,7 @@ function MenuMobileItem({ item, isOpen, isActive, onOpen }) {
         ...(isActive && {
           color: 'primary.main',
           fontWeight: 'fontWeightMedium',
-          bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity)
+          bgcolor: (theme) => alpha(theme.palette?.primary.main, theme.palette?.action.selectedOpacity)
         })
       }}
     >

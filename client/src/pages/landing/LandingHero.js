@@ -14,7 +14,7 @@ import { varFadeIn, varFadeInUp, varWrapEnter, varFadeInRight } from '../../comp
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   position: 'relative',
-  backgroundColor: theme.palette.grey[400],
+  backgroundColor: theme.palette?.grey[400],
   [theme.breakpoints.up('md')]: {
     top: 0,
     left: 0,

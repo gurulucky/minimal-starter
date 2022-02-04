@@ -12,8 +12,8 @@ import { varFadeInUp, MotionInView } from '../../components/animate';
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(24, 0),
   backgroundImage:
-    theme.palette.mode === 'light'
-      ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
+    theme.palette?.mode === 'light'
+      ? `linear-gradient(180deg, ${alpha(theme.palette?.grey[300], 0)} 0%, ${theme.palette?.grey[300]} 100%)`
       : 'none'
 }));
 
@@ -32,7 +32,7 @@ const ScreenStyle = styled(MotionInView)(({ theme }) => ({
   paddingBottom: 1,
   maxWidth: 160,
   borderRadius: 8,
-  backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
+  backgroundColor: theme.palette?.grey[theme.palette?.mode === 'light' ? 300 : 800],
   [theme.breakpoints.up('sm')]: {
     maxWidth: 320,
     paddingRight: 4,
@@ -73,7 +73,7 @@ const variantScreenRight = {
 
 export default function LandingHugePackElements() {
   const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
+  const isLight = theme.palette?.mode === 'light';
   const isRTL = theme.direction === 'rtl';
 
   const screenLeftAnimate = variantScreenLeft;
@@ -145,7 +145,7 @@ export default function LandingHugePackElements() {
                   transition={{ duration: 0.72, ease: 'easeOut' }}
                   sx={{
                     boxShadow: `${isRTL ? -80 : 80}px -40px 80px ${alpha(
-                      isLight ? theme.palette.grey[600] : theme.palette.common.black,
+                      isLight ? theme.palette?.grey[600] : theme.palette?.common.black,
                       0.48
                     )}`,
                     ...(index === 0 && {

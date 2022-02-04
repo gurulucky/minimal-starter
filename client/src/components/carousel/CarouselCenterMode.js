@@ -87,7 +87,7 @@ function CarouselItem({ item }) {
           position: 'absolute',
           color: 'common.white',
           backgroundImage: (theme) =>
-            `linear-gradient(to top, ${theme.palette.grey[900]} 0%,${alpha(theme.palette.grey[900], 0)} 100%)`
+            `linear-gradient(to top, ${theme.palette?.grey[900]} 0%,${alpha(theme.palette?.grey[900], 0)} 100%)`
         }}
       >
         <Typography variant="h4" paragraph>

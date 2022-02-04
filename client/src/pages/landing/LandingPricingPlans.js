@@ -42,17 +42,17 @@ function PlanCard({ plan, cardIndex }) {
   const theme = useTheme();
   const { license, commons, options, icons } = plan;
 
-  const isLight = theme.palette.mode === 'light';
+  const isLight = theme.palette?.mode === 'light';
 
   return (
     <Card
       sx={{
         p: 5,
         boxShadow: (theme) =>
-          `0px 48px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.12)}`,
+          `0px 48px 80px ${alpha(isLight ? theme.palette?.grey[500] : theme.palette?.common.black, 0.12)}`,
         ...(cardIndex === 1 && {
           boxShadow: (theme) =>
-            `0px 48px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.48)}`
+            `0px 48px 80px ${alpha(isLight ? theme.palette?.grey[500] : theme.palette?.common.black, 0.48)}`
         })
       }}
     >
@@ -165,7 +165,7 @@ export default function LandingPricingPlans() {
           <MotionInView variants={varFadeInDown}>
             <Typography
               sx={{
-                color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'text.primary')
+                color: (theme) => (theme.palette?.mode === 'light' ? 'text.secondary' : 'text.primary')
               }}
             >
               Choose the perfect plan for your needs. Always flexible to grow

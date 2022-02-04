@@ -29,7 +29,7 @@ const RootStyle = styled(Box)(({ theme }) => ({
 const ArrowStyle = styled(MIconButton)(({ theme }) => ({
   padding: 6,
   opacity: 0.48,
-  color: theme.palette.common.white,
+  color: theme.palette?.common.white,
   '&:hover': { opacity: 1 }
 }));
 

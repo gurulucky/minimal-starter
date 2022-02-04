@@ -13,7 +13,7 @@ import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardAct
 
 const LinkStyle = styled(Link)(({ theme }) => ({
   ...theme.typography.subtitle2,
-  color: theme.palette.text.primary,
+  color: theme.palette?.text.primary,
   marginRight: theme.spacing(5),
   transition: theme.transitions.create('opacity', {
     duration: theme.transitions.duration.shortest

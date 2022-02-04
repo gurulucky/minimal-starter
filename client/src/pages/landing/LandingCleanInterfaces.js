@@ -28,7 +28,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 export default function LandingCleanInterfaces() {
   const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
+  const isLight = theme.palette?.mode === 'light';
 
   return (
     <RootStyle>
@@ -46,7 +46,7 @@ export default function LandingCleanInterfaces() {
               paragraph
               sx={{
                 ...(!isLight && {
-                  textShadow: (theme) => `4px 4px 16px ${alpha(theme.palette.grey[800], 0.48)}`
+                  textShadow: (theme) => `4px 4px 16px ${alpha(theme.palette?.grey[800], 0.48)}`
                 })
               }}
             >

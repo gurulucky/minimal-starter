@@ -41,13 +41,13 @@ const ArrowStyle = styled(MIconButton)(({ theme }) => ({
   cursor: 'pointer',
   alignItems: 'center',
   justifyContent: 'center',
-  color: theme.palette.common.white,
-  background: theme.palette.grey[900],
+  color: theme.palette?.common.white,
+  background: theme.palette?.grey[900],
   borderRadius: theme.shape.borderRadiusSm,
   transition: theme.transitions.create('opacity'),
   '&:hover': {
     opacity: 1,
-    background: theme.palette.grey[900]
+    background: theme.palette?.grey[900]
   }
 }));
 
